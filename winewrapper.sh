@@ -22,7 +22,7 @@ export UE_HORDE_SHARED_DIR="C:\\Uba"
 if [ -n "${UE_HORDE_TERMINATION_SIGNAL_FILE}" ]; then
   # Convert /some/path to Z:\some\path
   # Replace forward slashes with backslashes
-  export UE_HORDE_TERMINATION_SIGNAL_FILE="Z:${UE_HORDE_TERMINATION_SIGNAL_FILE//\//\\}"
+  export UE_HORDE_TERMINATION_SIGNAL_FILE="Z:$${UE_HORDE_TERMINATION_SIGNAL_FILE//\//\\}"
 fi
 
 # Finally, call the wine64 binary with the original arguments
