@@ -21,11 +21,11 @@ cp agent-config/Agent.example.json agent-config/Agent.json
 
 Fill in `{{URL}}`, `{{AGENT_REGISTRATION_TOKEN}}`, `{{COMPUTE_IP}}` and `{{AGENT_NAME}}` fields.
 
-> [!INFO]
+> [!NOTE]
 > Docker will self-report its container ip as the compute ip to the horde server, which will prevent other clients from connecting to it.
 > Ensure you supply the ip of the host machine running the container.
 
-> [!INFO]
+> [!NOTE]
 > Navigating to the http://[HORDE-SERVER-URL]/account page with an admin user logged in will include a Get agent registration token link.
 > The first time an agent connects to the server, it will generate a unique connection token for itself.
 
