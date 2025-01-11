@@ -19,7 +19,11 @@ Copy the example `agent-config/Agent.example.json` to `agent-config/Agent.json`:
 cp agent-config/Agent.example.json agent-config/Agent.json
 ```
 
-Fill in `{{URL}}`, `{{AGENT_REGISTRATION_TOKEN}}` and `{{AGENT_NAME}}` fields.
+Fill in `{{URL}}`, `{{AGENT_REGISTRATION_TOKEN}}`, `{{COMPUTE_IP}}` and `{{AGENT_NAME}}` fields.
+
+> [!INFO]
+> Docker will self-report its container ip as the compute ip to the horde server, which will prevent other clients from connecting to it.
+> Ensure you supply the ip of the host machine running the container.
 
 > [!INFO]
 > Navigating to the http://[HORDE-SERVER-URL]/account page with an admin user logged in will include a Get agent registration token link.
@@ -36,6 +40,7 @@ Fill in `{{URL}}`, `{{AGENT_REGISTRATION_TOKEN}}` and `{{AGENT_NAME}}` fields.
    ```bash
    docker run -d \
      --name horde-agent \
+     -p 7000-7010:7000-7010 \
      -e HORDE_SERVER_URL="http(s)://{{URL}}" \
      -e HORDE_AGENT_DOWNLOAD_TOKEN="OptionalDownloadTokenHere" \
      horde-agent

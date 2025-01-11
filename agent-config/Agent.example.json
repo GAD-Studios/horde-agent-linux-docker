@@ -16,5 +16,7 @@
     "workingDir": "/home/horde/Horde/Work",
 
     "wineExecutablePath": "/usr/local/bin/winewrapper.sh"
+
+    "computeIp": "{{COMPUTE_IP}}"
   }
 }

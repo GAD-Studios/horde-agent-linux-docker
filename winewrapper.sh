@@ -13,7 +13,7 @@ export WINEDEBUG=-all
 # Use 64-bit Wine
 export WINEARCH=win64
 # This is where Wine will store its virtual Windows filesystem
-export WINEPREFIX=/opt/horde/wine-data
+export WINEPREFIX=/home/horde/Horde/wine-data
 
 # Override or set a directory for UBA or other Windows-based paths
 export UE_HORDE_SHARED_DIR="C:\\Uba"
