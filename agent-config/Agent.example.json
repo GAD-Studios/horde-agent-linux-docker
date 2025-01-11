@@ -1,0 +1,20 @@
+{
+  "horde": {
+
+    "serverProfiles": [
+      {
+        "name": "Default",
+        "url": "https://{{URL}}",
+        "token": "{{AGENT_REGISTRATION_TOKEN}}"
+      }
+    ],
+
+    "server": "Default",
+
+    "name": "{{AGENT_NAME}}",
+
+    "workingDir": "/home/horde/Horde/Work",
+
+    "wineExecutablePath": "/usr/local/bin/winewrapper.sh"
+  }
+}
